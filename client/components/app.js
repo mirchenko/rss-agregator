@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Channels from './Channels';
+import News from './News';
 
-class App extends Component {
-  render() {
-    return <h1>React-Redux-Starter</h1>;
-  }
+export default() => {
+  return (
+    <wrapper>
+      <Channels />
+      <News />
+    </wrapper>
+  );
 }
-
-export default App;

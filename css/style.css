@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: tahoma;
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+.show-opacity {
+  opacity: 1;
+}
+
+.spinner {
+  opacity: 0;
+  width: 100%;
+  height: 30px;
+  background-image: url(../img/spinner2.gif);
+  background-size: contain;
+  background-position-x: 50%;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+}
+
+wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+wrapper #channelsList {
+  flex: 0 0 270px;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  list-style: none;
+  flex-direction: row;
+  height: 100vh;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+wrapper #channelsList.fetching > .spinner {
+  opacity: 1;
+}
+
+wrapper #channelsList > form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  align-self: stretch;
+  width: 100%;
+  align-content: space-between;
+  padding: 10px 2px;
+  flex-wrap: wrap;
+}
+
+wrapper #channelsList > form .has-error {
+  color: red;
+  font-size: 10px;
+  text-align: left;
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+
+wrapper #channelsList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+wrapper #channelsList ul li {
+  margin: 0;
+  padding: 5px 10px;
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  border-top: 1px solid #E7E7E7;
+}
+
+wrapper #channelsList ul li.unwatched {
+  background-color: #E3EEFF;
+}
+
+wrapper #channelsList > li {
+  padding-top: 15px;
+  background: #FEFEFE;
+  border: 1px solid #E6DCDB;
+  cursor: pointer;
+  min-height: 75px;
+  height: 75px;
+  overflow: hidden;
+  position: relative;
+}
+
+wrapper #channelsList > li.opened {
+  overflow: visible;
+  height: auto;
+}
+
+wrapper #channelsList > li .unwatched-field {
+  text-align: center;
+  position: absolute;
+  padding: 0 5px;
+  font-size: 11px;
+  height: 18px;
+  line-height: 18px;
+  min-width: 20px;
+  width: auto;
+  top: 5px;
+  right: 5px;
+  border-radius: 10px;
+  background-color: #E01931;
+  color: #fff;
+  text-shadow: 0 2px 2px rgba(0,0,0, 0.5);
+  box-shadow: 0 0 1.2px 0.3px rgba(0,0,0, 0.3);
+}
+
+wrapper #channelsList li form {
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+wrapper #channelsList li form.fetching {
+  opacity: 0.65;
+}
+
+wrapper #channelsList li form.fetching .spinner {
+  opacity: 1;
+}
+
+wrapper #channelsList li form .svg-container {
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+wrapper #channelsList li form input {
+  border: 0;
+  outline: 0;
+  margin: 10px 10px 5px 10px ;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  width: 75%;
+  background-color: transparent;
+}
+
+wrapper #channelsList li form button {
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 10px 10px 10px;
+}
+
+wrapper #channelsList li form .has-error {
+  color: red;
+  font-size: 10px;
+  text-align: left;
+  padding: 0px 10px;
+  display: block;
+  width: 100%;
+}
+
+wrapper #newsContainer {
+  flex: 0 0 700px;
+  flex-direction: column;
+  padding: 15px;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  margin-left: 50px;
+}
+
+wrapper #newsContainer h2 {
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+wrapper #newsContainer .pub-date {
+  align-self: center;
+  margin-bottom: 2.5px;
+  margin-left: 25px;
+}
+
+wrapper #newsContainer .news-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-around;
+  padding-bottom: 20px;
+}
+
+wrapper #newsContainer .news-content span {
+  margin-left: 10px;
+  width: 250px;
+}
+
+wrapper #newsContainer .news-content img {
+  margin-right: 10px;
+  width: 250px;
+}
+
+wrapper #newsContainer > a {
+  display: block;
+  align-self: stretch;
+  margin: 15px 15px;
+  border: 1px solid #5d5b5b;
+  border-radius: 5px;
+  color: #5d5b5b;
+  font-size: 14px;
+  line-height: 30px;
+  height: 30px;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+}
